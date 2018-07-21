@@ -1,0 +1,18 @@
+body {
+	background-color: #DBE0E5;
+}
+
+.ad-box {
+	background-color: white; 
+	width: 80%;
+	border-radius: 4px;
+	padding: 1%;
+	margin: 10px 0px;
+	border: 1px lightgrey solid;
+}
+
+.ad-box img {
+	width: 100%;
+	padding: 1%;
+	border-radius: 4px;
+}

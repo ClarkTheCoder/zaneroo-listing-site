@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'classifieds/latest-ads.css' %}" type="text/css">
+<title>Zaneroo - Latest Ads</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container"><br>
+
+
+<section id="latest-ads">
+  {% if messages %}
+  {% for message in messages %}
+  <br>{{ message }}<br>
+  {% endfor %}
+  {% endif %}
+  <div class="row">
+      <div class="col-9 ads">
+          {% for post in posts %}
+          <div class="ad-box">
+            <div class="ad-title">
+              <h4>${{ post.price }} - <a href="{% url 'classifieds:ad_details' post.id %}">{{ post.title }}</a></h4>
+            </div>
+            <div class="ad-image">
+              <a href="{% url 'classifieds:ad_details' post.id %}">
+                {% if post.picture %}
+                <img src="{{ post.picture.url }}" width="500px" height="400px" class="img-fluid">
+                {% else %}
+                <img src="{% static /media/profile_pics/default.jpg }}" width="240px">
+                {% endif %}
+              </a>
+            </div>
+            <div class="ad-description">
+             <p>{{ post.body }}</p>
+            </div>
+            <div class="ad-pub_date">
+             <p>Posted on {{ post.pub_date_pretty }}th</p>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+
+
+      <div class="col-3">
+        <aside class="sidebar">
+          <div class="sidebar-title">
+           <!-- icon here--><h5>Latest Listings</h5>
+          </div>
+          <div class="sidebar-summary">
+           <p>Come here to see what other islanders are selling. <br>Click below to post your own ad!</p>
+          </div>
+          <div class="creat-ad">
+            <a href="{% url 'classifieds:create_post' %}">Post Ad</a>
+          </div>
+        </aside>
+      </div>
+
+  </div>
+</section>
+</div>
+{% endblock %}

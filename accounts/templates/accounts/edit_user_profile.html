@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<title>Edit Profile</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/edit-user-profile.css' %}" type="text/css">
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <br><a href="{% url 'edit_profile' %}">Change Email</a><br>
+  <a href="{% url 'change_password' %}">Change Password</a><br>
+  <br>
+  <form class="edit-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br>
+    <button type="submit">Update Profile</button>
+  </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+form p label {
+  display: none;
+}
+
+form p{
+  margin-bottom: 4px;
+}

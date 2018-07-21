@@ -1,0 +1,83 @@
+/* global CSS for account related pages. */
+
+/* font1: font-family: 'IBM Plex Sans', sans-serif; 
+   font2: font-family: 'Noto Sans', sans-serif;
+*/
+
+/* site-wide styles */
+
+/* navigation */
+.navbar {
+	border-bottom: 1px lightgrey solid;
+	background-color: #fff;
+	font-size: 95%;
+}
+
+.zan {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+input {
+	padding: 1% 1%;
+	border-radius: 4px;
+	border: 1px solid lightgrey;
+	background-color: white;
+	input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+	}
+}
+
+input:hover {
+	border: 1px solid darkgrey;
+}
+
+
+textarea {
+	padding: 1% 1%;
+	border-radius: 4px;
+	border: 1px solid lightgrey;
+	input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+	}
+}
+
+button {
+	background-color: #0079d3;
+	color: #fff;
+	border-radius: 3px;
+	padding: 1% 5%;
+	border: none;
+	box-shadow: none;
+	text-transform: lowercase;
+	font-weight: 500;
+	font-family: 'Noto Sans', sans-serif;
+	-webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: background .2s;
+}
+
+button:hover {
+	background-color: #0086ed;
+	color: #fff;
+	border-radius: 3px;
+	padding: 1% 5%;
+	border: none;
+	box-shadow: none;
+	text-transform: lowercase;
+	font-weight: 500;
+	font-family: 'Noto Sans', sans-serif;
+	cursor: pointer;
+}
+
+
+
+
+
+

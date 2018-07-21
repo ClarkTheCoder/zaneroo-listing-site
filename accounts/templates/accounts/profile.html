@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<title>Zaneroo - {{ user }}</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/profile.css' %}" type="text/css">
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+ {% if messages %}
+ {% for message in messages %}
+
+ <div id="profile-updated>">
+ <h6><br><br>{{ message }}</h6>
+ </div>
+
+ {% endfor %}
+ {% endif %}
+
+<section id="profile-page">
+  <div class="row">
+    <div class="col-4">
+      <div class="profile">
+        <div class="profile-image">
+          {% if user.userprofile.profile_picture %}
+          <img src="{{ user.userprofile.profile_picture.url }}" width="200px" class="img-fluid">
+          {% else %}
+          <img src="{% static /media/profile_pics/default.jpg }}" width="240px">
+          {% endif %}
+        </div>
+        <div class="profile-username">
+          <h5>{{ user.username }}</h5>
+        </div>
+        <div class="profile-name">
+          <p><i>{{ user.first_name }} {{ user.last_name }}</i></p>
+        </div>
+        <div class="profile-rep">
+          <p><b>{{ user.userprofile.reputation }}</b> Reputation</a></p>
+        </div>
+        <div class="profile-city">
+          <p>{{ user.userprofile.city }}</p>
+        </div>
+        <div class="profile-motto">
+          <p>{{ user.userprofile.description }}</p>
+        </div>
+        <div class="profile-btn-create">
+          <a href="{% url 'classifieds:create_post' %}">Create Ad</a>
+        </div>
+        <div class="profile-btn-edit">
+          <a href="{% url 'edit_user_profile' %}">Edit Profile</a>
+        </div>
+      </div>
+      <!-- profile footer here -->
+    </div>
+
+    <div class="col-8">
+      {% for ad in user_ads %}
+      <div class="user-ads">
+        <div class="ad-picture">
+          {% if ad.picture %}
+              <img src="{{ ad.picture.url }}" width="75px" height="70px" class="img-fluid">
+              {% else %}
+              <img src="{% static /media/profile_pics/default.jpg }}" width="240px">
+              {% endif %}
+        </div>
+        <div class="ad-price">
+          $<strong>{{ ad.price }}</strong>
+        </div>
+        <div class="ad-title">
+           :<strong><a href="{% url 'classifieds:ad_details' ad.id %}">{{ ad.title }}</a></strong>
+        </div>
+        <div class="adbody">
+          {{ ad.body }}
+        </div>
+        <div class="ad-pubdate">
+          {{ ad.pub_date_pretty_extra }}
+        </div>
+      </div>
+      {% endfor %} 
+    </div>
+  </div>
+
+</section>
+
+
+</div>
+
+{% endblock %}

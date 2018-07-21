@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'classifieds/create.css' %}" type="text/css">
+<title>Create Post</title>
+{% endblock %}
+
+{% block body %}
+<div class="container"><br>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" value="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}

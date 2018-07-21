@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/login.css' %}" type="text/css">
+<title>Zaneroo - Login</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <section id="login">
+    <div class="row">
+      <div class="col-md-9 offset-md-4">
+        <div id="main-form">
+          <div id="form-title">
+            <h3>Login</h3>
+          </div>
+          <div id="form-login">
+            <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="login-btn" name="button">Login</button>
+            </form>
+            <br>
+          <!-- use proper url template -->
+          <a href="/accounts/reset-password"><h6>Forgot Password?</h6></a>
+           <a href="/accounts/register"><h6>Sign Up!</h6></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

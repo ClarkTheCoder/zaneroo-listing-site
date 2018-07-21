@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<title>Edit Profile</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <br>
+  <form class="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'view_profile' %}">Back to profile</a><br><br>
+    <button type="submit">Update</button>
+  </form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+body {
+	background-color: #DBE0E5;
+}
+
+#profile-page {
+	margin-top: 45px;
+}
+
+.profile {
+	background: white;
+	border-radius: 4px;
+	padding: 4%;
+	border: 1px lightgrey solid;
+	font-family: 'Noto Sans', sans-serif;
+	width: 100%;
+	line-height: 1.25;	
+}
+
+.profile-image img {
+	border-radius: 4px;
+	border: 2px #f7f7f7 solid;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.profile-username h5 {
+	width: 55%;
+	font-weight: 600;
+}
+
+.profile-motto {
+	margin-top: 1px;
+}
+
+.profile-city p {
+	margin-bottom: 2px;
+}
+
+.profile:hover {
+	border: 1px darkgrey solid;
+}
+
+.profile-btn-create {
+	background-color: #0079d3;
+	text-align: center;
+	border-radius: 3px;
+	padding: 2% 2%;
+	cursor: pointer;
+	transition: background .2s;
+	margin-bottom: 4px;
+}
+
+.profile-btn-create a {
+	color: white;
+	text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.profile-btn-create:hover {
+	background-color: #0086ed;
+}
+
+.profile-btn-edit {
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+#profile-updated h6 {
+	background-color: white;
+}
+
+.user-ads {
+	background-color: white;
+	border: 1px lightgrey solid;
+	border-radius: 4px;
+	padding: 1.2% 2%;
+	cursor: pointer;
+}
+
+.user-ads:hover {
+	border: 1px darkgrey solid;
+}
+
+.user-ads .ad-title, .ad-price {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 100%;
+}
+
+.user-ads .ad-price {
+	float: left;
+}
+
+.user-ads .ad-picture {
+	float: right;
+}
+
+.user-ads .ad-picture img {
+	border-radius: 2px;
+}
+
+/*had to name this selector with a different convetion due to bug*/
+
+.adbody {
+	font-size: 88%;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+.ad-pubdate {
+	padding-bottom: 1%;
+	font-size: 75%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
