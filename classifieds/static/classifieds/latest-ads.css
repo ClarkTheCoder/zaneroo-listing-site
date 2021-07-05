@@ -16,3 +16,10 @@ body {
 	padding: 1%;
 	border-radius: 4px;
 }
+
+.sidebar {
+	background-color: white; 
+	padding: 5%;
+	border-radius: 2%;
+	border: 1px lightgrey solid;
+}
