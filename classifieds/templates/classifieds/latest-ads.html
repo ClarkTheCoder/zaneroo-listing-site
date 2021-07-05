@@ -10,7 +10,6 @@
 
 <div class="container"><br>
 
-
   <section id="latest-ads">
     {% if messages %}
     {% for message in messages %}
@@ -18,7 +17,7 @@
     {% endfor %}
     {% endif %}
     <div class="row">
-      <div class="col-9 ads">
+      <div class="col-md-8 ads">
         {% for post in posts %}
         <div class="ad-box">
           <div class="ad-title">
@@ -39,12 +38,13 @@
           <div class="ad-pub_date">
             <p>Posted on {{ post.pub_date_pretty }}th</p>
           </div>
+
         </div>
         {% endfor %}
       </div>
 
 
-      <div class="col-3">
+      <div class="col-md-4">
         <aside class="sidebar">
           <div class="sidebar-title">
             <!-- icon here-->
