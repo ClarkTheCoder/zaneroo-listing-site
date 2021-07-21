@@ -8,6 +8,7 @@
 
 {% block body %}
 <div class="container"><br>
+  <h1>Create an ad</h1>
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
